@@ -1871,7 +1871,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1831203967711430, guid: b4da8e5939a773647a81747809ae79ea, type: 3}
   spawnDelay: 1
-  maxEnemies: 10
+  maxEnemies: 5
   player: {fileID: 1654592727646638, guid: 7171f81da2a94e54cabd04a4d6cda18f, type: 3}
 --- !u!1 &1751052138
 GameObject:

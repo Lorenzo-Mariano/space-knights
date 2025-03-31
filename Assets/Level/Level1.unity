@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4245709253697937458, guid: b55ae882dd19bfd4195c315b83f3d79e, type: 3}
+  m_Sprite: {fileID: -7483528433444943053, guid: a40cfa56518bdf240b6e65f5256e175a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -737,7 +737,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8249707898285230333, guid: 011500e4b19ffa749b92a777784b4278, type: 3}
+  m_Sprite: {fileID: 2306435333150586161, guid: 01a8f068934d1c54dac904330f93bd96, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1240,7 +1240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1409003704397030, guid: 41b9aa9122156244980f2ffa397b8848, type: 3}
   spawnDelay: 1
-  maxEnemies: 50
+  maxEnemies: 10
   player: {fileID: 1834672434}
 --- !u!1 &1126866949
 GameObject:
