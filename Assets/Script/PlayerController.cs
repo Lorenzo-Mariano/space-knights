@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
     public int maxHealth = 3;
     private int currentHealth;
 
+    public HealthBar healthBar;
+
     public GameOverManager gameOverManager; // Reference to GameOverManager
 
     // Movement flags for buttons
@@ -33,8 +35,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         currentHealth = maxHealth; // Set player health to max at start
-
-        Debug.Log("Player Health: " + currentHealth); // Log initial health
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     void Update()
@@ -88,7 +89,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
-    {   
+    {
         if (collision.CompareTag("Enemy"))
         {
             TakeDamage(1); // Reduce health when touching an enemy
@@ -98,6 +99,7 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
         animator.SetTrigger("Hurt");
 
         Debug.Log("Player took damage! Current Health: " + currentHealth); // Log health update
