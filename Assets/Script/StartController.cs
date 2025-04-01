@@ -7,7 +7,7 @@ public class StartController : MonoBehaviour {
 
 	public void OnStartClick()
 	{
-		SceneManager.LoadScene("Level1");
+		SceneManager.LoadScene("In");
 	}
 	public void OnMapClick()
 	{
