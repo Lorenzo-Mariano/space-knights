@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.SceneManagement; // For scene management
 using UnityEngine.UI; // Import UI namespace
 
 public class PlayerController : MonoBehaviour
@@ -36,6 +37,22 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         currentHealth = maxHealth; // Set player health to max at start
         healthBar.SetMaxHealth(maxHealth);
+
+        if (gameOverManager == null)
+        {
+            gameOverManager = FindObjectOfType<GameOverManager>();
+        }
+
+        if (gameOverManager != null)
+        {
+            Debug.Log("GameOverManager is assigned successfully.");
+        }
+        else
+        {
+            Debug.LogWarning(
+                "GameOverManager is NULL! Make sure to assign it in the Inspector or find it dynamically."
+            );
+        }
     }
 
     void Update()
