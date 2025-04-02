@@ -2,18 +2,23 @@
 
 public class EnemyBehavior : MonoBehaviour
 {
+    public int maxHealth = 20;
+    int currentHealth;
+
     public float moveSpeed = 1f;
     public float chaseSpeed = 2f;
     public float chaseRange = 5f;
     public Transform groundCheck;
     public LayerMask groundLayer;
-    
+
     private Transform player;
     private Rigidbody2D rb;
     private bool hasDamagedPlayer = false; // Prevent multiple hits per collision
 
     void Start()
     {
+        currentHealth = maxHealth;
+
         rb = GetComponent<Rigidbody2D>();
 
         GameObject foundPlayer = GameObject.FindGameObjectWithTag("Player");
@@ -23,7 +28,11 @@ public class EnemyBehavior : MonoBehaviour
         }
 
         // Ensure the enemy sprite faces left
-        transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        transform.localScale = new Vector3(
+            -Mathf.Abs(transform.localScale.x),
+            transform.localScale.y,
+            transform.localScale.z
+        );
     }
 
     void Update()
@@ -57,6 +66,19 @@ public class EnemyBehavior : MonoBehaviour
     void StopMoving()
     {
         rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+    }
+
+    public void TakeDamage(int damage)
+    {
+        Debug.Log("Enemy health before dmg:" + currentHealth);
+        currentHealth -= damage;
+        Debug.Log("Enemy health after dmg:" + currentHealth);
+
+        if (currentHealth <= 0)
+        {
+            Debug.Log("Enemy died!");
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
