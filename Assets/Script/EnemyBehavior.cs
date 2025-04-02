@@ -2,8 +2,8 @@
 
 public class EnemyBehavior : MonoBehaviour
 {
-    public int maxHealth = 20;
-    int currentHealth;
+    public int maxHealth = 10;
+    public int currentHealth;
 
     public float moveSpeed = 1f;
     public float chaseSpeed = 2f;

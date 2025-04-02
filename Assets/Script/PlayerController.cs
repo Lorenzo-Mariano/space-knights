@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     public float attackRange = 1f;
     public LayerMask enemyLayers;
     bool isAttacking = false;
-    public float attackCooldown = 0.5f; // Cooldown for attack
+    public float attackCooldown = 0.05f; // Cooldown for attack
     float attackTimer = 0f;
 
     // Health system
@@ -33,6 +33,9 @@ public class PlayerController : MonoBehaviour
     public int maxHealth = 3;
     private int currentHealth;
     public HealthBar healthBar;
+
+    // points maybe
+    public int score = 0;
 
     void Start()
     {
@@ -58,11 +61,13 @@ public class PlayerController : MonoBehaviour
         // Attack logic
         if (attackTimer > 0f)
         {
-            attackTimer -= Time.deltaTime;
-        }
-        else
-        {
-            isAttacking = false;
+            attackTimer -= Time.deltaTime; // Reduce the timer every frame
+
+            if (attackTimer <= 0f) // When timer expires, allow attacking again
+            {
+                isAttacking = false;
+                attackTimer = 0f; // Ensure it doesn't go negative
+            }
         }
     }
 
@@ -153,6 +158,7 @@ public class PlayerController : MonoBehaviour
         if (!isAttacking)
         {
             isAttacking = true;
+            attackTimer = attackCooldown;
             animator.SetTrigger("Attack");
 
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(
@@ -168,6 +174,12 @@ public class PlayerController : MonoBehaviour
                 {
                     enemyBehavior.TakeDamage(10);
                     Debug.Log("Enemy has been hit!");
+
+                    if (enemyBehavior.currentHealth <= 0)
+                    {
+                        score += 10;
+                        Debug.Log("Score added " + score);
+                    }
                 }
                 else
                 {
@@ -175,7 +187,7 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
-            attackTimer = attackCooldown;
+            // attackTimer = attackCooldown;
         }
     }
 
