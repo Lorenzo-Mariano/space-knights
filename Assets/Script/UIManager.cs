@@ -4,7 +4,7 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
     public GameObject healthBarPrefab; // Assign in Inspector
-    private GameObject currentHealthBar; 
+    private GameObject currentHealthBar;
 
     void Awake()
     {
@@ -23,7 +23,10 @@ public class UIManager : MonoBehaviour
     {
         if (currentHealthBar == null)
         {
-            currentHealthBar = Instantiate(healthBarPrefab, FindObjectOfType<Canvas>().transform);
+            currentHealthBar = Instantiate(
+                healthBarPrefab,
+                FindFirstObjectByType<Canvas>().transform
+            );
         }
     }
 }
