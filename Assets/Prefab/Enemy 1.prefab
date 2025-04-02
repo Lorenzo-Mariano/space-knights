@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 114491415093982584}
   - component: {fileID: 50279687644904162}
   - component: {fileID: 61019555514423034}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Enemy 1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -103,6 +103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a21bd01d9c922c84280780a9b6300915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 10
+  currentHealth: 0
   moveSpeed: 4
   chaseSpeed: 4
   chaseRange: 10
