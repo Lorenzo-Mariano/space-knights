@@ -1349,6 +1349,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Jump
       objectReference: {fileID: 0}
+    - target: {fileID: 431414851882740010, guid: 669d72a0a33f8394e8a5c38826123cdd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 431414851882740010, guid: 669d72a0a33f8394e8a5c38826123cdd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1053.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 431414851882740010, guid: 669d72a0a33f8394e8a5c38826123cdd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.009903
+      objectReference: {fileID: 0}
+    - target: {fileID: 431414851882740010, guid: 669d72a0a33f8394e8a5c38826123cdd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00048828
+      objectReference: {fileID: 0}
     - target: {fileID: 524584073047752216, guid: 669d72a0a33f8394e8a5c38826123cdd, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1367,19 +1383,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1690726741713740428, guid: 669d72a0a33f8394e8a5c38826123cdd, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 974.1378
+      value: 1920
       objectReference: {fileID: 0}
     - target: {fileID: 1690726741713740428, guid: 669d72a0a33f8394e8a5c38826123cdd, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 974.14
+      value: 1053.5
       objectReference: {fileID: 0}
     - target: {fileID: 1690726741713740428, guid: 669d72a0a33f8394e8a5c38826123cdd, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000011444
+      value: -0.010056
       objectReference: {fileID: 0}
     - target: {fileID: 1690726741713740428, guid: 669d72a0a33f8394e8a5c38826123cdd, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.0000038147
+      value: 0.0052586
+      objectReference: {fileID: 0}
+    - target: {fileID: 2051910634956574790, guid: 669d72a0a33f8394e8a5c38826123cdd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 2051910634956574790, guid: 669d72a0a33f8394e8a5c38826123cdd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1053.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2051910634956574790, guid: 669d72a0a33f8394e8a5c38826123cdd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.0015488
+      objectReference: {fileID: 0}
+    - target: {fileID: 2051910634956574790, guid: 669d72a0a33f8394e8a5c38826123cdd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.000053406
       objectReference: {fileID: 0}
     - target: {fileID: 3036778676871938658, guid: 669d72a0a33f8394e8a5c38826123cdd, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1412,7 +1444,7 @@ PrefabInstance:
     - target: {fileID: 4972311974688982998, guid: 669d72a0a33f8394e8a5c38826123cdd, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -7483528433444943053, guid: a40cfa56518bdf240b6e65f5256e175a, type: 3}
+      objectReference: {fileID: -9119984810506785682, guid: 396dad069a3ae824b849f5074a43eb3d, type: 3}
     - target: {fileID: 5335683615279768022, guid: 669d72a0a33f8394e8a5c38826123cdd, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1508,7 +1540,7 @@ PrefabInstance:
     - target: {fileID: 7992672514850238365, guid: 669d72a0a33f8394e8a5c38826123cdd, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2306435333150586161, guid: 01a8f068934d1c54dac904330f93bd96, type: 3}
+      objectReference: {fileID: 7851470227991654557, guid: f03996b584ff00e4980213d231a7fead, type: 3}
     - target: {fileID: 8100953567615000841, guid: 669d72a0a33f8394e8a5c38826123cdd, type: 3}
       propertyPath: m_IsActive
       value: 1
